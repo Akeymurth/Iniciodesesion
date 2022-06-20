@@ -1,0 +1,240 @@
+@charset "UTF-8";
+/* Se quita el margen y s pone color a toda la pagina*/
+body {
+  margin: 0;
+  font-family: 'Mulish', sans-serif;
+}
+
+.flex, .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*Aqui estariamos poniendo la barra de arriba, tambien el display flex, junto con la justificación
+    manda el perfil hasta la derecha de la pagina*/
+.header {
+  background-color: #21c08b;
+  color: white;
+  width: 100%;
+  height: 100px;
+  /*cambia tipo de letra, "etiqueta"*/
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 0px;
+}
+
+/*Este seria el tamaño de la imagen*/
+.header__img {
+  width: 200px;
+  margin-left: 30px;
+}
+
+.login {
+  /*sierve para dar dos colores a la pagina*/
+  background: -webkit-gradient(linear, left top, left bottom, from(#21c08b), to(#ab88ff));
+  background: linear-gradient(#21c08b, #ab88ff);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*acomoda haciabajo, lo que allamos puesto en html*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 30px;
+  min-height: calc(100vh - 200px);
+}
+
+/*aqui trabajamos con los del cuadro del registro*/
+.login__container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 40px;
+  color: white;
+  padding: 60px 68px 40px;
+  min-height: 700px;
+  width: 300px;
+  /*con estas tres lineas de codigo acomodamos todo para que quede bien separado*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login__container--form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login__container--form label {
+  font-size: 14px;
+}
+
+.login__container--remember-me {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0px 70px 0px;
+}
+
+.login__container--remember-me a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.login__container--remember-me a:hover {
+  text-decoration: underline;
+}
+
+.login__container--social-media > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.login__container--social-media > div > img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.login_container--register {
+  font-size: 14px;
+}
+
+.login_container--register a {
+  font-size: 16px;
+  color: white;
+  /*para poner la letra en negrita*/
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login_container--register a:hover {
+  text-decoration: underline;
+}
+
+.input {
+  background-color: transparent;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid white;
+  margin-top: 30px;
+  font-size: 16px;
+  font-family: 'Mulish', sans-serif;
+  outline: none;
+  /*el padin despega la letra de la linea que tiene abajo*/
+  padding: 0px 20px;
+  /*hace que la letra se separe de la lienea de abajo*/
+  height: 50px;
+}
+
+/*paceholder, sirve para cambiar el color de adentro de las cajas de texto*/
+::-webkit-input-placeholder {
+  color: white;
+}
+:-ms-input-placeholder {
+  color: white;
+}
+::-ms-input-placeholder {
+  color: white;
+}
+::placeholder {
+  color: white;
+}
+
+.button {
+  /*el background sirve para hacer transparente el boton*/
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  /*el cursor es para que la flecha del mouse cambie a manita*/
+  cursor: pointer;
+  font-size: 16px;
+  /*el font weight hace que sea mas oscuro*/
+  font-weight: bold;
+  font-family: 'Mulish', sans-serif;
+  /* heght sirve para hacer mas grande el boton, en cuestion de hacia arriba o abajo*/
+  height: 50px;
+  /*leater spacing, sirve para que las letras tengan, mas espacio entre ellas*/
+  letter-spacing: 1px;
+}
+
+.footer {
+  /*si no rrellena completamente, hacia abajo, hay que poner un badgroud, como en el ejemplo:*/
+  /*background-color: #ab88ff;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+.footer a {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/*sirve para la aparencia en telefonos moviles*/
+@media only screen and (max-width: 600px) {
+  .login__container {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    width: 100%;
+  }
+  .footer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
